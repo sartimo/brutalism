@@ -6,4 +6,5 @@ keywords:
 
 hello, world!
 
-please use my <a href="res/pgp.asc">PGP key</a> for secure communication.
+Please use my <a href="res/pgp.txt">PGP key</a> for secure communication. I have hashed my email (```VGltbyBTYXJrYXIgPHNhcnRpbW8xMEBnbWFpbC5jb20+```) using base64 to prevent spam.
+
