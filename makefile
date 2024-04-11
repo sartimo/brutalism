@@ -6,11 +6,11 @@ pages: clean
 	./build.sh
 
 clean:
-	rm -rf out/*
+	rm -rf docs/*
 
 publish: pages
 	rm -rf ../pages/{*.html,res}
-	cp -r out/* ../pages/
+	cp -r docs/* ../pages/
 	pushd ../pages/ && \
 		git --no-pager diff && \
 		git commit -am "$(LAST_COMMIT_MESSAGE)" && \

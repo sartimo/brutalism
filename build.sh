@@ -7,7 +7,7 @@ set -eo > /dev/null
 input_directory=in
 input_directory_pages=$input_directory/pages
 input_directory_posts=$input_directory/posts
-output_directory=out
+output_directory=docs
 
 # [WORKING] generate out/index.html from in/index.md
 generate_index_page_html () {
