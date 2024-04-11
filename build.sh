@@ -29,7 +29,7 @@ generate_articles_list_md () {
     link=$(basename $post | sed -E "s/^[0-9-]+//" | sed -E "s/md$/html/")
     description=$(grep -m 1 "description: " $post | cut -d " " -f 2-)
 
-    echo "- [$title]($link) <em>$date</em><br/>$description<br/>" >> $blog_index_md
+    echo "- [$title]($link) <em>$date</em><br/>$description<br/><br>" >> $blog_index_md
   done
 }
 

@@ -7,22 +7,6 @@ keywords:
 - about
 - techblog
 - blog
-- devops
-- hobbies
-- about
-- chess
-- dota2
-- rave
-- photography
-- bouldering
-- scuba
-- diving
-- juggling
-- spinning
-- firestaff
-- ledstaff
-- frisbee
-- dogs
 ---
 
 
