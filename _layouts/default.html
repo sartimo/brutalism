@@ -4,22 +4,25 @@ layout: base
 <header>
   {% include header.html -%}
 </header>
-<section role="main">
- {% for post in site.posts %}
-    <article class="post">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+Blog
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+{% for post in site.posts %}
+<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+{% endfor %}
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+Projects
 
-  {{ content }}
-</section>
-<footer>
-  {% include footer.html -%}
-</footer>
+<a href=q>QotNews
+<a href=m>Spaceport
+<a href=t>t0txt
+<a href=n>Notica
+<a href=y>[more]</a>
+
+Creations
+
+<a href=7>Fake Dog for Home Security
+<a href=5>Garage Door Opener Hack
+<a href=3>Theatre Acoustic Panels
+<a href=0>Wine Crate Coffee Table
+<a href=z>[more]
