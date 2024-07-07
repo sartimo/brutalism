@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+  
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+  
+  <title>mgx</title>
+  <link rel="canonical" href="https://mgx.me">
+  
+
+
+<meta name="mgx" content="look-for-the-bear-necessities">
+
+<!-- Primary Meta Tags -->
+<meta name="title" content="mgx">
+<meta name="description" content="I&#x27;m a tinkerer. mgx is my sandbox blog, where I publish unfiltered, raw thoughts and experiments.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:site_name" content="mgx">
+<meta property="og:title" content="mgx">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mgx.me">
+<meta property="og:description" content="I&#x27;m a tinkerer. mgx is my sandbox blog, where I publish unfiltered, raw thoughts and experiments.">
+<meta property="og:image" content="https://static.mgx.me/images/2023/the-dead-author.webp">
+
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary">
+<meta property="twitter:url" content="https://mgx.me">
+<meta property="twitter:title" content="mgx">
+<meta property="twitter:description" content="I&#x27;m a tinkerer. mgx is my sandbox blog, where I publish unfiltered, raw thoughts and experiments.">
+<meta property="twitter:image" content="https://static.mgx.me/images/2023/the-dead-author.webp">
+
+
+
+<!-- Microdata -->
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "website",
+    "name": "mgx",
+    "url": "https://mgx.me",
+    "description": "I&#x27;m a tinkerer. mgx is my sandbox blog, where I publish unfiltered, raw thoughts and experiments.",
+    "about": {
+      "@type": "mgx",
+      "description": "I&#x27;m a tinkerer. mgx is my sandbox blog, where I publish unfiltered, raw thoughts and experiments."
+    }
+  }
+</script>
+<link rel="alternate" type="application/atom+xml" href="/feed/">
+<link rel="alternate" type="application/rss+xml" href="/feed/?type=rss">
+
+  
+
+
+<link rel="apple-touch-icon" sizes="57x57" href="https://static.mgx.me/icons/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://static.mgx.me/icons/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://static.mgx.me/icons/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://static.mgx.me/icons/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://static.mgx.me/icons/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://static.mgx.me/icons/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://static.mgx.me/icons/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://static.mgx.me/icons/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://static.mgx.me/icons/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://static.mgx.me/icons/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://static.mgx.me/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://static.mgx.me/icons/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://static.mgx.me/icons/favicon-16x16.png">
+<link rel="manifest" href="https://static.mgx.me/icons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="https://static.mgx.me/icons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+
+
+
+
+  
+  
+  
+
+<link rel="shortcut icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20100%20100'%3E%3Ctext%20y='.9em'%20font-size='90'%3E✍️%3C/text%3E%3C/svg%3E">
+
+
+
+  <style>
+      
+      
+/* 
+McLuhan Lite by mgx.me.
+Based on McLuhan WordPress Theme, Copyright 2018 Anders Norén.
+McLuhan is distributed under the terms of the GNU GPL.
+McLuhan Lite is distributed under the terms of the GNU GPL.
+*/
+
+/* Width for photography pages */
+
+@media screen and (min-width: 1000px) {
+ .post.misc_01 main,
+ .post.misc_02 main,
+ .post.misc_03 main,
+ .post.misc_04 main,
+ .post.misc_width main {
+    width: 600px !important;
+  }
+}
+
+/* Base styles */
+
+:root {
+    /* Colors */
+    --text-color: #121212;
+    --bg-color: #F2F0E8;
+    --primary-color: #06c;
+    --border-color: #888;
+    --blockquote-border-color: currentColor;
+    --code-bg-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.65;
+    font-size: 17px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+/*body * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}*/
+
+a {
+    color: currentColor;
+    text-decoration-color: currentColor;
+    text-decoration-thickness: 0.1ex;
+    text-underline-offset: 0.3ex;
+}
+
+a:hover,
+ul.blog-posts li a:hover,
+a.title:hover {
+    text-decoration-color: #999 !important;
+    text-decoration: underline;
+    text-decoration-thickness: 0.2ex;
+}
+
+.upvote-button {
+    flex-direction: row !important;
+    margin-left: -5px;
+}
+
+.upvote-count {
+    margin-top: 0 !important;
+    font-size: 12px;
+}
+
+.upvote-button svg {
+    height: 18px;
+    width: 18px;
+}
+
+p.tags a {
+  display: none;
+}
+
+footer p {
+  margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    font-size: .9em;
+    margin-bottom: 30px;
+    max-width: 100%;
+    overflow: hidden;
+    width: 100%
+}
+
+th,td {
+    line-height: 1.4;
+    margin: 0;
+    overflow: visible;
+    padding: 2.5%;
+    text-align:left;
+    border: 1px solid var(--border-color);
+}
+
+caption {
+    font-size: 13px;
+    font-weight: 700;
+    padding-bottom: 2.5%;
+    text-align: center;
+    text-transform: uppercase
+}
+
+thead {
+    vertical-align: bottom;
+    white-space: nowrap;
+    background: rgba(0,0,4,0.05 )
+}
+
+th {
+    font-weight: 600
+}
+
+blockquote {
+    border-color: var(--blockquote-border-color);
+    border-style: solid;
+    border-width: 0 0 0 2px;
+    margin: 0 0 30px;
+    padding: 0 0 0 20px
+}
+
+blockquote p {
+    font-weight: 500;
+    hanging-punctuation: first
+}
+
+blockquote cite {
+    display: block;
+    font-style: normal;
+    margin: 1em 0 0
+}
+
+blockquote cite:before {
+    content: "— "
+}
+
+.post p:nth-child(2) {
+    margin-bottom: 2.5rem;
+}
+
+.title h1,
+.post main h1,
+.page main h1 {
+    font-weight: 600;
+    line-height: 1.25;
+    margin: 0;
+    -ms-word-break: break-word;
+    word-break: break-word;
+}
+
+.title h1 {
+    font-size: inherit !important;
+}
+
+.post main h1,
+.page main h1 {
+    font-size: 28px;
+}
+
+.highlight,
+.code {
+    padding: 5px 15px;
+    background-color: var(--code-bg-color);
+    border-radius: 3px;
+    overflow-x: auto;
+    line-height: 1.2;
+    font-size: .9rem;
+    margin-bottom: 1rem;
+}
+
+header {
+    background: ;
+    color: #000;
+}
+
+header a,
+nav a:hover {
+    color: #000 !important;
+}
+
+nav p {
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+nav a:hover {
+    color: #555;
+}
+
+nav p > * {
+    margin-right: 1rem;
+}
+
+ul.blog-posts {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 4rem;
+}
+
+ul.blog-posts {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 4rem;
+}
+
+ul.blog-posts li {
+    overflow: hidden;
+    padding-bottom: 10px;
+    border-top: 1px solid rgb(162 156 156 / 13%);
+    padding-top: 10px;
+}
+
+hr {
+  color: rgba(162, 156, 156, 0.13);
+}
+
+ul.blog-posts li a {
+    text-transform: lowercase;
+    text-decoration: none;
+    color: #333;
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 110px); 
+}
+
+ul.blog-posts li time {
+    float: right;
+    font-size: 15px;
+    margin-top: 2px;
+}
+
+time {
+    font-style: normal;
+    color: #888;
+    font-size: 90%;
+}
+
+.tags a,
+ul.blog-posts li a,
+nav a,
+.title,
+footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+p.tags {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: #888;
+}
+
+/*.home h2:before {
+    content: '***';
+    display: block;
+    opacity: .5;
+    font-size: 18px;
+    margin-bottom: 10px;
+}*/
+
+img {
+    padding: 10px 0;
+    display: block;
+    max-width: 100%;
+    height: auto;  
+}
+
+/* Media queries */
+@media screen and (max-width: 999px) {
+    body {
+        font-size: 17px;
+        margin: 0;
+    }  
+  
+    header {
+        top: 0;
+        left: 0;
+        padding: 10px 20px 20px;
+        border-bottom: 1px solid rgb(162 156 156 / 13%);
+    }
+    
+    main {
+        padding: 3rem 20px;
+    }
+    
+    
+    footer {
+        padding: 0 0 20px 20px !important;
+    }
+    
+    .home h2 {
+        font-size: 18px !important;
+        font-weight: 400;
+        line-height: 1.45;
+    }
+    
+    .title h1 {
+        margin-top: 1rem !important;
+        margin-bottom: 10px;
+    }
+    
+    .post main h1,
+    .page main h1 {
+        font-size: 24px;
+    }
+    
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        position: relative;
+    }
+    
+    img {
+        min-width: 520px;
+    }
+    
+    header {
+        margin: 0 auto;
+        padding: 80px 40px 144px;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        top: 0;
+        width: 165px;
+        z-index: 99998;
+        font-size: 17px;
+        border-right: 1px solid rgb(162 156 156 / 13%);
+    }
+  
+    nav a {
+        display: block;
+    }
+    
+    main {
+        padding-top: 70px;
+        padding-bottom: 72px;
+        margin: 0 350px;
+        width: 520px;
+    }
+    
+    footer {
+        position: fixed;
+        color: #000;
+        bottom: 0;
+        z-index: 99999;
+        padding: 80px 30px 80px !important;
+        text-transform: lowercase;
+        font-size: 17px;
+    }
+    
+    .home h2 {
+        font-size: 19px !important;
+        font-weight: 400;
+        line-height: 1.45;
+        margin-top: -2px;
+    }
+    
+    .title h1 {
+        margin-bottom: 3rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --text-color: #fff;
+        --primary-color: #06c;
+        --border-color: #888;
+        --blockquote-border-color: currentColor;
+        --code-bg-color: rgba(0, 0, 0, 0.1);
+    }
+    body {
+        background: var(--bg-color);
+        color: var(--text-color);
+    }
+    .highlight, .code {
+        background-color: rgb(219 219 219 / 10%) !important;
+    }
+  
+    header a, nav a:hover, footer {
+        color: #fff !important;
+    }    
+  
+    @media screen and (min-width: 1000px) {
+        header {
+            border-right: 1px solid #333;
+            background: #121212;
+            color: #fff;
+        }
+    }  
+      
+    @media screen and (max-width: 999px) {
+        header {
+            border-bottom: 1px solid #333;
+        }         
+    }   
+}
+
+/* notion-like callouts */
+ .callout {
+     font-size:95%;
+     border-radius: 3px;
+     padding: 16px;
+}
+ @media (prefers-color-scheme: light) {
+     .grey_callout {
+         background: rgb(241, 241, 239);
+    }
+     .brown_callout {
+         background: rgb(244, 238, 238);
+    }
+     .orange_callout {
+         background: rgb(251, 236, 221);
+    }
+     .yellow_callout {
+         background: rgb(251, 243, 219);
+    }
+     .green_callout {
+         background: rgb(237, 243, 236);
+    }
+     .blue_callout {
+         background: rgb(231, 243, 248);
+    }
+     .purple_callout {
+         background: rgba(244, 240, 247, 0.8);
+    }
+     .pink_callout {
+         background: rgba(249, 238, 243, 0.8);
+    }
+     .red_callout {
+         background: rgb(253, 235, 236);
+    }
+}
+ @media (prefers-color-scheme: dark) {
+     .callout {
+         color: white;
+    }
+     .grey_callout {
+         background: rgba(124,139,154,.13);
+    }
+     .brown_callout {
+         background: rgb(55, 34, 13);
+    }
+     .orange_callout {
+         background: rgb(71, 45, 1);
+    }
+     .yellow_callout {
+         background: rgba(240,165,15,.13);
+    }
+     .green_callout {
+         background: rgba(52,183,67,.12);
+    }
+     .blue_callout {
+         background: rgba(33,172,232,.12);
+    }
+     .purple_callout {
+         background: rgba(135,85,236,.12);
+    }
+     .pink_callout {
+         background: rgba(225,71,174,.11);
+    }
+     .red_callout {
+         background: rgba(209,46,46,.11);
+    }
+}
+      
+  </style>
+
+  
+</head>
+  <body class="home">
+  <header>
+    <a class="title" href="/">
+      <h1>
+        mgx
+      </h1>
+    </a>
+    <nav>
+      <p><a href='https://go.mgx.me/orma' target='_blank'>orma</a> <a href='/feed'>atom</a> <a href='/feed?type=rss'>rss</a></p>
+
+    </nav>
+  </header>
+    <main>
+    
+
+
+
+<style>
+#image-container1, #image-container2 {
+display: none;
+position: absolute;}
+@media only screen and (min-width: 768px){
+#tinkerer, #unfiltered {text-decoration:underline;text-decoration-style: dotted;}}
+#image-container1 img {
+  min-width: 100px !important;
+  margin-top: -120%;
+  margin-left:160px;
+}
+#image-container2 img {
+  min-width: 100px !important;
+  margin-top: -55%;
+  margin-left:310px;
+}
+</style>
+<h2 id=life-is-a-movie-death-is-a-photograph>life is a movie. death is a photograph.</h2><!--I’m a Chengdu-based <span id="tinkerer" onmouseover="showImage(1, this)" onmouseout="hideImage(1)">tinkerer</span>. Throughout my career, I have taken on both generalist and specialist roles. I publish <span id="unfiltered" onmouseover="showImage(2, this)" onmouseout="hideImage(2)">unfiltered</span>, raw thoughts and experiments on this website without worrying about perfection.
+
+<div class="tinkerer" id="image-container1"> <img src="https://static.mgx.me/mi.jpg" alt="mgx" id="hovered-image1"> </div>
+
+<div class="unfiltered" id="image-container2"> <img src="https://static.mgx.me/bender.webp" alt="bender" id="hovered-image2"> </div> -->
+<!--<p style="font-weight:600;" id="archive">archive</p>-->
+<p>
+
+<ul class="embedded blog-posts">
+    
+
+{% for post in site.posts %}
+<li>
+<span>
+<i>
+<time>
+{{ post.date | date: '%Y-%m-%d' }}
+</time>
+</i>
+</span>
+<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+</li>
+{% endfor %}
+
+</ul>
+</p>
+</main>
+  <footer style="padding:25px 0;">
+    
+
+<span id="footer-directive">
+<!--<span id="currentDay"></span>
+<script src="https://static.mgx.me/js/day.js"></script>
+<span><a href="https://go.mgx.me/htmlearth" target="_blank">html.earth</a></span>
+<span><a href="https://voicenotes.com/?via=mighil" target="_blank">voicenotes.com</a></span>-->
+<script src="https://static.mgx.me/js/extra.js"></script>
+
+</span>
+
+<span>
+    Powered by <a href="https://bearblog.dev">Bear ʕ•ᴥ•ʔ</a>
+</span>
+
+  </footer>
+
+  </body>
+</html>
